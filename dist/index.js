@@ -655,7 +655,6 @@ var ArtifactClient = /** @class */ (function () {
         this.idwValidation = 'validationtype=IDWValidation';
         this.nameTag = 'name';
         this.params = params;
-        this.requestOptions.ignoreSslError = true;
         this.client = new httpClient.HttpClient('synapse-git-cicd-deploy-task', undefined, this.requestOptions);
         this.deploymentTrackingRequests = new Array();
     }

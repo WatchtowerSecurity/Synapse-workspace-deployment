@@ -50,7 +50,6 @@ export class ArtifactClient {
 
     constructor(params: Params) {
         this.params = params;
-        this.requestOptions.ignoreSslError = true;
         this.client = new httpClient.HttpClient(
             'synapse-git-cicd-deploy-task',
             undefined,
