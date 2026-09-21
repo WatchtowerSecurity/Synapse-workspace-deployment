@@ -50,7 +50,6 @@ export class ArtifactClient {
 
     constructor(params: Params) {
         this.params = params;
-        this.requestOptions.ignoreSslError = true;
         this.client = new httpClient.HttpClient(
             'synapse-git-cicd-deploy-task',
             undefined,
@@ -489,7 +488,7 @@ export class ArtifactClient {
 
     private async checkStatus(url: string, name: string, token: string) {
         var timeout = new Date().getTime() + (60000 * 20); // 20 Minutes
-        var delayMilliSecs = 30000; // 0.5 minute
+        var delayMilliSecs = 5000; // 5 seconds
 
         while (true) {
             var currentTime = new Date().getTime();
@@ -536,7 +535,7 @@ export class ArtifactClient {
 
     private async checkStatusForDelete(url: string, name: string, token: string) {
         var timeout = new Date().getTime() + (60000 * 20); // 20 Minutes
-        var delayMilliSecs = 30000; // 0.5 minute
+        var delayMilliSecs = 5000; // 5 seconds
 
         while (true) {
             var currentTime = new Date().getTime();

@@ -655,7 +655,6 @@ var ArtifactClient = /** @class */ (function () {
         this.idwValidation = 'validationtype=IDWValidation';
         this.nameTag = 'name';
         this.params = params;
-        this.requestOptions.ignoreSslError = true;
         this.client = new httpClient.HttpClient('synapse-git-cicd-deploy-task', undefined, this.requestOptions);
         this.deploymentTrackingRequests = new Array();
     }
@@ -1273,7 +1272,7 @@ var ArtifactClient = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         timeout = new Date().getTime() + (60000 * 20);
-                        delayMilliSecs = 30000;
+                        delayMilliSecs = 5000;
                         _a.label = 1;
                     case 1:
                         if (false) {}
@@ -1338,7 +1337,7 @@ var ArtifactClient = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         timeout = new Date().getTime() + (60000 * 20);
-                        delayMilliSecs = 30000;
+                        delayMilliSecs = 5000;
                         _a.label = 1;
                     case 1:
                         if (false) {}
